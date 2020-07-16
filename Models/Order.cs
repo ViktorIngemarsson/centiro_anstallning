@@ -20,7 +20,7 @@ namespace centiro_anstallning.Models
             return JsonSerializer.Serialize(this, PrintOptions);
         }
 
-        public Int32 OrderNumber { get; set; }
+        public int OrderNumber { get; set; }
         public List<OrderLine> OrderLines { get; set; } = new List<OrderLine>();
     }
 }

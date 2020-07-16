@@ -29,7 +29,7 @@ namespace centiro_anstallning.Services
 
         private static Order ReadTxtFile(string fileName)
         {
-            string[] lines = System.IO.File.ReadAllLines(@fileName);
+            string[] lines = File.ReadAllLines(@fileName);
             Order OutputOrder = new Order();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -63,10 +63,8 @@ namespace centiro_anstallning.Services
         private static void DeserializeObject(AllOrders incoming, string SavePath)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(incoming.GetType());
-            using (StreamWriter writer = new StreamWriter(@SavePath))
-            {
-                xmlSerializer.Serialize(writer, incoming);
-            }
+            using StreamWriter writer = new StreamWriter(@SavePath);
+            xmlSerializer.Serialize(writer, incoming);
         }
     }
 }

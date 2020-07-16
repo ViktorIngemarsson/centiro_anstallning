@@ -7,7 +7,6 @@ namespace centiro_anstallning.Services
 {
     public class SerializingOrders
     {
-
         public static Order Ingoing(int OrderNumberToFind)
         {
             AllOrders AllOrders = SerializeOutputOrder();
@@ -17,19 +16,17 @@ namespace centiro_anstallning.Services
 
         private static AllOrders SerializeOutputOrder()
         {
-            string filepath = Environment.CurrentDirectory + "/Db/saved_orders.xml";
-            XmlSerializer ser = new XmlSerializer(typeof(AllOrders));
-            using (StreamReader sr = new StreamReader(@filepath))
-            {
-                return (AllOrders)ser.Deserialize(sr);
-            }
+            string FilePath = Environment.CurrentDirectory + "/Db/saved_orders.xml";
+            XmlSerializer Serializer = new XmlSerializer(typeof(AllOrders));
+            using StreamReader StreamReader = new StreamReader(@FilePath);
+            return (AllOrders)Serializer.Deserialize(StreamReader);
         }
 
         private static Order FindOrder(AllOrders InputOrders, int OrderNumberToFind)
         {
             for(int i = 0; i < InputOrders.NumberOrders(); i++)
             {
-                if(InputOrders.Orders[i].OrderNumber == OrderNumberToFind)
+                if (InputOrders.Orders[i].OrderNumber == OrderNumberToFind)
                 {
                     return InputOrders.Orders[i];
                 }

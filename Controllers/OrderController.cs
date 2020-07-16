@@ -5,10 +5,10 @@ using centiro_anstallning.Services;
 
 namespace centiro_anstallning.Controllers
 {
-        [ApiController]
-        [Route("orderapi")]
-        public class OrderController : ControllerBase
-        {
+    [ApiController]
+    [Route("orderapi")]
+    public class OrderController : ControllerBase
+    {
         [HttpGet("{id}")]
         public string GetTodoItem(string id)
         {
@@ -31,5 +31,5 @@ namespace centiro_anstallning.Controllers
             
         }
 
-        }
+    }
 }
