@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  centiro_anstallning:
+    image: centiroanstallning:dev
+    container_name: centiro_anstallning
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "centiro_anstallning"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
+    volumes:
+      - /Users/Ingemarsson/Projects/centiro_anstallning:/app
+      - /Users/Ingemarsson/Projects/centiro_anstallning:/src
+      - /Users/Ingemarsson/vsdbg/vs2017u5:/remote_debugger:rw
+      - /Users/Ingemarsson/.nuget/packages/:/root/.nuget/packages:ro
+      - /usr/local/share/dotnet/sdk/NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages --additionalProbingPath /root/.nuget/fallbackpackages  \"/app/bin/Debug/netcoreapp3.1/centiro_anstallning.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true

@@ -1,0 +1,16 @@
+services:
+  centiro_anstallning:
+    build:
+      context: /Users/Ingemarsson/Projects/centiro_anstallning
+      dockerfile: ./Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: centiroanstallning
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - /Users/Ingemarsson/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/Ingemarsson/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

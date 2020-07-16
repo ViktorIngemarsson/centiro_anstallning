@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{E5C2DE17-AA80-45D3-948A-85E752462058}|Default">
+  <MonoDevelop.Ide.ItemProperties.centiro__anstallning PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="centiro_anstallning" expanded="True">
+            <Node name="centiro_anstallning" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Db" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="docker-compose" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders>
+    <String>/Users/Ingemarsson/Projects/centiro_anstallning_bu</String>
+  </Debugger.DebugSourceFolders>
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

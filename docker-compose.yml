@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  centiro_anstallning:
+    image: ${DOCKER_REGISTRY-}centiroanstallning
+    build:
+      context: .
+      dockerfile: ./Dockerfile

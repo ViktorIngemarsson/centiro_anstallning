@@ -1,0 +1,8 @@
+/Users/Ingemarsson/Projects/centiro_anstallning/bin/Debug/appsettings.Development.json
+/Users/Ingemarsson/Projects/centiro_anstallning/bin/Debug/appsettings.json
+/Users/Ingemarsson/Projects/centiro_anstallning/bin/Debug/Properties/launchSettings.json
+/Users/Ingemarsson/Projects/centiro_anstallning/bin/Debug/centiro_anstallning.dll
+/Users/Ingemarsson/Projects/centiro_anstallning/bin/Debug/centiro_anstallning.pdb
+/Users/Ingemarsson/Projects/centiro_anstallning/obj/Debug/docker-compose.dcprojAssemblyReference.cache
+/Users/Ingemarsson/Projects/centiro_anstallning/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
+/Users/Ingemarsson/Projects/centiro_anstallning/obj/Debug/docker-compose.dcproj.CopyComplete
